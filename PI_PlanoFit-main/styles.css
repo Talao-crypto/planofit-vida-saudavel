@@ -1,0 +1,1261 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box; 
+  font-family: sans-serif;
+}
+/* ================== Paleta de Cores ================== */
+:root {
+  --main-bg-color: #ffffff;
+  --header-bg-gradient: linear-gradient(to bottom, #e0e0e0, #ffffff);
+  --text-color: #4f4f4f;
+  --highlight-color: #D6BD1C; /* Amarelo */
+  --button-bg-color: #333333; /* Preto suave */
+  --button-hover-bg-color: #D6BD1C; /* Amarelo */
+  --card-bg-color: #f2f2f2; /* Cinza claro */
+  --card-hover-shadow: rgba(0, 0, 0, 0.2);
+  --nav-button-color: #f9f9f9; /* Branco quebrado */
+}
+
+/* ================== Estilo Global ================== */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* ================== Cabeçalho ================== */
+header {
+  background: var(--header-bg-gradient);
+  padding: 10px 20px;
+  text-align: center;
+  color: #4f4f4f;
+  border-bottom: 2px solid #dcdcdc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo-icon {
+  font-size: 1.5em; /* Tamanho do ícone */
+  margin-right: 5px;
+  color: #d6bd1c; /* Cor de destaque */
+}
+
+.logo-text {
+  color: #333;
+}
+
+.logo-text span {
+  color: #d6bd1c; /* Destaque para "Fit" */
+}
+
+.tagline {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: -10px; /* Reduz o espaço entre logotipo e slogan */
+}
+
+/* ================== Navegação ================== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+nav button {
+  background-color: var(--button-bg-color);
+  color: var(--nav-button-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+nav button:hover {
+  background-color: var(--button-hover-bg-color);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* ================== Seção Sobre Nós ================== */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--card-bg-color);
+}
+
+.about-image {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text:hover {
+  transform: scale(1.03);
+}
+
+.about-text h2 {
+  color: var(--highlight-color);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* ================== Seção de Planos ================== */
+.plans-section {
+  padding: 40px;
+  text-align: center;
+  background-color: #f9f9f9;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.plans-section h2 {
+  color: var(--highlight-color);
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.plans {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.plan-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  width: 48%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.plan-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px var(--card-hover-shadow);
+}
+
+.plan-card h3 {
+  font-size: 1.5em;
+  color: var(--highlight-color);
+}
+
+.plan-card p {
+  color: #666;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.plan-card ul li {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.plan-card .price {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--highlight-color);
+  margin: 20px 0;
+}
+
+.plan-card button {
+  background-color: var(--highlight-color);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.plan-card button:hover {
+  background-color: #333;
+}
+
+/* Estilo Especial para o Plano Premium */
+.premium-plan {
+  background-color: #fff7e6;
+  border: 2px solid var(--highlight-color);
+}
+
+.premium-plan h3 {
+  color: #333333;
+}
+
+.premium-plan .price {
+  color: #d6a019;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--highlight-color);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+/* ================== Responsividade para Telas Menores ================== */
+@media (max-width: 768px) {
+  .plans {
+    flex-direction: column;
+  }
+
+  .plan-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ================== Rodapé ================== */
+footer {
+  background-color: var(--main-bg-color);
+  text-align: center;
+  padding: 10px;
+  color: var(--highlight-color);
+  border-top: 1px solid #dcdcdc;
+}
+
+footer span {
+  color: var(--highlight-color);
+}
+
+/* ================== Seção de Descrição ================== */
+.descricao {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #32312D;
+}
+
+.descricao p {
+  font-size: 1.3rem;
+  color: #BFBFBF;
+}
+
+/* ================== Carrossel de Imagens ================== */
+:root {
+  --carousel-width: 500px;
+  --carousel-height: 300px;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 90%;
+  margin-top: 80px;
+}
+
+.carousel {
+  position: relative;
+  width: 700px;
+  height: 400px;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel img.active {
+  opacity: 1;
+}
+
+/* ================== Seção de Feedback ================== */
+.feedback-section {
+  background-color: #f3f3f3;
+  padding: 40px;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-section h2 {
+  color: var(--highlight-color);
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.feedback-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feedback-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.feedback-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px var(--card-hover-shadow);
+}
+
+.feedback-card p {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feedback-card h4 {
+  color: var(--highlight-color);
+  font-weight: bold;
+}
+
+/* ================== Rodapé de Créditos ================== */
+.credits-footer {
+  background-color: #333333;
+  color: #f3f3f3;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  border-top: 1px solid #444444;
+}
+
+.credits-footer p {
+  margin: 5px 0;
+}
+
+.credits-footer a {
+  color: var(--highlight-color);
+  text-decoration: none;
+}
+
+.credits-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ================== Seção de Dicas Motivacionais ================== */
+.tips-section {
+  padding: 40px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.tips-section h2 {
+  font-size: 1.8em;
+  color: var(--highlight-color);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tips-section .emoji {
+  font-size: 1.2em;
+}
+
+.tips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tip-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.tip-item:hover {
+  transform: scale(1.05);
+}
+
+.icon {
+  font-size: 1.8em;
+  color: var(--highlight-color);
+  margin-right: 15px;
+}
+
+.tip-item p {
+  color: #333;
+  font-size: 1em;
+  margin: 0;
+}
+
+/* ================== Estilo do Container Principal ================== */
+.help-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* ================== Seção de Contato ================== */
+.contact-info {
+  background-color: #d8d6d6;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+  color: #AF9800;
+  font-size: 1.8em;
+  margin-top: 0;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+/* ================== Formulário de Contato ================== */
+section h2 {
+  color: #AF9800;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+section form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos rótulos */
+section form label {
+  color: #404040;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Campos de entrada e área de texto */
+section form input[type="text"],
+section form input[type="email"],
+section form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #AF9800;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  color: #404040;
+}
+
+section form input::placeholder,
+section form textarea::placeholder {
+  color: #BFBFBF;
+}
+
+/* Botão do formulário */
+section form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: #AF9800;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+section form button:hover {
+  background-color: #D6BD1C;
+  transform: scale(1.05);
+}
+
+section form input:focus,
+section form textarea:focus {
+  outline: none;
+  border-color: #D6BD1C;
+  box-shadow: 0 0 5px rgba(214, 189, 28, 0.5);
+}
+
+
+
+.banner-dieta{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+}
+.banner-dieta h2{
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: #D6BD1C;
+}
+.banner-dieta p {
+  font-size: 1.1rem;
+}
+.banner-dieta li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #4f4f4f;
+}
+.banner-dieta h3 {
+  color: #D6BD1C;
+  margin-bottom: 30px;
+}
+
+.dieta_forms{
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF ;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.digite-forms{
+  width: 80%;
+  height: 40vh;
+  background-color: #D6BD1C;
+  border-radius: 40px;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  padding: 20px 0 ;
+}
+.dieta_forms_input{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+} 
+
+.dieta_forms_input label{
+  height: 80px;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4f4f4f;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 3px solid #AF9800;
+}
+
+#dieta_forms_icon{
+  color: #4f4f4f;
+  margin-bottom: -30px;
+  font-size: 2rem;
+}
+
+.dieta_forms_input input{
+  height: 50px;
+  font-size: 1.5rem;
+  width: 40%;
+  text-decoration: none;
+  text-align: center;
+  border: 3px solid #AF9800;
+}
+
+.selecione_forms{
+  width: 80%;
+  height: 40vh;
+  background-color: #D6BD1C;
+  border-radius: 40px;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  padding: 20px 0 ;
+}
+
+
+  .dieta_forms_input select {
+    height: 60px; 
+    width: 80%;
+    font-size: 1.5rem; 
+    width: 50%; 
+    text-align: center;
+    border: 3px solid #AF9800;
+    color: #4f4f4f;
+  }
+
+
+
+  .botao_continua a {
+    font-size: 1.5rem;
+    color: #4f4f4f;
+    background-color: #D6BD1C;
+    width: 400px;
+    height: 70px;
+    border: 4px solid #AF9800;
+    border-radius: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .botao_continua a:hover {
+    background-color: transparent;
+    color: #D6BD1C;
+    border-color: #D6BD1C;
+  }
+
+  .descricao{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 0 -8px rgba(0, 0, 0, 1);
+    padding: 20px;
+  }
+  .descricao p{
+    font-size: 1.3rem;
+    color: #D6BD1C;
+  }
+  
+  .descricao li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .descricao li:hover{
+    color: #AF9800;
+  }
+  
+  .barra-pesquisa{
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
+  }
+  
+  .barra-pesquisa input{  
+      width: 500px;
+      padding: 10px 15px;
+      padding-left: 35px; /* Espaço para o ícone */
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      outline: none;
+      font-size: 16px;
+      background-image: url('https://img.icons8.com/ios-filled/50/ffffff/search--v1.png'); /* Ícone de pesquisa */
+      background-size: 18px; /* Tamanho do ícone */
+      background-position: 10px center; /* Posição do ícone */
+      background-repeat: no-repeat; /* Evita repetição */
+      transition: border-color 0.3s;  
+      background-color: var(--nav-button-color);
+      cursor: pointer;
+      color: #FFFFFF;
+  }
+  
+  .exercicios{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+  .filter-container {
+    background-color: var(--card-bg-color);
+    color: #000000;
+    border-radius: 20px;
+    font-weight: bold;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colunas dinâmicas */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 40px;
+    margin: 20px auto;
+  }
+  
+  .filter-item {
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Tamanho fixo para os botões */
+    height: 50px; /* Altura fixa */
+    padding: 10px;
+    border: 2px solid #AF9800;
+    border-radius: 10px;
+    background-color: #D6BD1C;
+    color: #FFFFFF;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .thumbnail{
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 150px;
+    max-height: 150px;
+  }
+  
+  .filter-item:hover {
+    background-color: #AF9800;
+    transform: scale(1.05);
+  }
+  
+  .equipamentos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+  
+  .filter-item:hover{
+    background-color: transparent;
+    transform: translateY(-3px);
+  }
+  
+  
+  
+  .exercise-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .exercise-item {
+    background: var(--card-hover-shadow);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+  }
+  
+  .exercise-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .exercise-item h3 {
+    margin: 0 0 10px;
+    color: #D6BD1C;
+    font-size: 1.5em;
+  }
+  
+  .exercise-item p {
+    margin: 5px 0;
+  }
+  
+  .exercise-item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #AF9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: 2px solid #AF9800;
+  }
+  
+  .exercise-item a:hover {
+    background-color: transparent;
+  }
+  
+  
+  /* Botão de Limpar Lista */
+/* Botão de Limpar Lista no Carrinho */
+.cart .clear-cart-btn {
+  background-color: #D6BD1C; /* Cor de fundo amarelo */
+  color: #fff; /* Cor do texto branco */
+  border: none; /* Remove a borda padrão */
+  padding: 10px 20px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Aponta como botão clicável */
+  font-weight: bold; /* Negrito */
+  font-size: 1rem; /* Tamanho da fonte */
+  margin-top: 20px; /* Espaço acima do botão */
+  display: block; /* Garante que o botão ocupe uma linha inteira */
+  width: 100%; /* Ocupa toda a largura do carrinho */
+  text-align: center; /* Centraliza o texto */
+  transition: background-color 0.3s; /* Transição apenas para a cor */
+}
+
+.cart .clear-cart-btn:hover {
+  background-color: #AF9800; /* Cor de fundo ao passar o mouse */
+}
+
+
+.cart {
+  margin-top: 30px;
+  padding: 20px;
+  border: 3px solid #AF9800;
+  border-radius: 5px;
+  background-color: var(--carousel-height);
+}
+
+.cart h2 {
+  margin-top: 0;
+  color: #D6BD1C;
+}
+
+.cart-list {
+  margin-top: 10px;
+  list-style-type: none;
+  padding: 0;
+}
+
+
+
+
+/* Banner Dieta */
+:root {
+  --main-bg-color: #ffffff;
+  --header-bg-gradient: linear-gradient(to bottom, #e0e0e0, #ffffff);
+  --text-color: #4f4f4f;
+  --highlight-color: #D6BD1C; /* Amarelo */
+  --button-bg-color: #333333; /* Preto suave */
+  --button-hover-bg-color: #D6BD1C; /* Amarelo */
+  --card-bg-color: #f2f2f2; /* Cinza claro */
+  --card-hover-shadow: rgba(0, 0, 0, 0.2);
+  --nav-button-color: #f9f9f9; /* Branco quebrado */
+  --input-focus-border: #AF9800;
+}
+
+/* ================== Estilo Global ================== */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* ================== Cabeçalho ================== */
+header {
+  background: var(--header-bg-gradient);
+  padding: 10px 20px;
+  text-align: center;
+  color: #4f4f4f;
+  border-bottom: 2px solid #dcdcdc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo-icon {
+  font-size: 1.5em; /* Tamanho do ícone */
+  margin-right: 5px;
+  color: #d6bd1c; /* Cor de destaque */
+}
+
+.logo-text {
+  color: #333;
+}
+
+.logo-text span {
+  color: #d6bd1c; /* Destaque para "Fit" */
+}
+
+.tagline {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: -10px; /* Reduz o espaço entre logotipo e slogan */
+}
+
+/* ================== Navegação ================== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+nav button {
+  background-color: var(--button-bg-color);
+  color: var(--nav-button-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+nav button:hover {
+  background-color: var(--button-hover-bg-color);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* ================== Banner ================== */
+.banner-dieta {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+}
+
+.banner-dieta h2 {
+  font-size: 2rem;
+  color: var(--highlight-color);
+  margin-bottom: 10px;
+}
+
+.banner-dieta p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.banner-dieta li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #4f4f4f;
+}
+
+.banner-dieta h3 {
+  color: var(--highlight-color);
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+/* ================== Formulário ================== */
+.dieta_forms {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.digite-forms,
+.selecione_forms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  background-color: var(--highlight-color);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dieta_forms_input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 240px;
+  gap: 10px;
+}
+
+.dieta_forms_input label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  background-color: var(--main-bg-color);
+  padding: 10px;
+  border: 2px solid var(--highlight-color);
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.dieta_forms_input input,
+.dieta_forms_input select {
+  font-size: 1rem;
+  padding: 10px;
+  border: 2px solid var(--highlight-color);
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  transition: border-color 0.3s ease-in-out;
+}
+
+.dieta_forms_input input:focus,
+.dieta_forms_input select:focus {
+  border-color: var(--input-focus-border);
+  outline: none;
+  box-shadow: 0 0 5px var(--input-focus-border);
+}
+
+/* Botão Continuar */
+.botao_continua {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.botao_continua a {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: var(--highlight-color);
+  border: 2px solid var(--highlight-color);
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.botao_continua a:hover {
+  background-color: transparent;
+  color: var(--highlight-color);
+  transform: scale(1.05);
+}
+
+/* ================== Lista Gerada ================== */
+.dieta-gerada {
+  display: none; /* Oculta inicialmente */
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border: 2px solid var(--highlight-color);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.dieta-gerada h2 {
+  color: var(--highlight-color);
+}
+
+.dieta-gerada ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dieta-gerada li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.dieta-gerada li:last-child {
+  border-bottom: none;
+}
+
+/* ================== Rodapé ================== */
+footer {
+  background-color: #333333;
+  text-align: center;
+  padding: 20px;
+  color: var(--nav-button-color);
+  font-size: 0.9rem;
+  border-top: 1px solid #444444;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: var(--highlight-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ================== Estilo Responsivo ================== */
+@media (max-width: 768px) {
+  .digite-forms,
+  .selecione_forms {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dieta_forms_input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .botao_continua a {
+    width: 80%;
+  }
+}
+
+
+
+.imc-calculator {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: var(--card-bg-color);
+  border: 2px solid var(--highlight-color);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px var(--card-hover-shadow);
+  transition: transform 0.3s;
+}
+
+.imc-calculator:hover {
+  transform: scale(1.03);
+}
+
+.imc-calculator h2 {
+  color: var(--highlight-color);
+  margin-bottom: 10px;
+}
+
+.imc-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.imc-inputs label {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.imc-inputs input {
+  padding: 10px;
+  border: 1px solid var(--highlight-color);
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#calcular-imc {
+  background-color: var(--button-bg-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#calcular-imc:hover {
+  background-color: var(--button-hover-bg-color);
+  color: #ffffff;
+}
+
+.imc-resultado {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--highlight-color);
+}

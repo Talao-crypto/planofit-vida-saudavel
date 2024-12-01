@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dieta</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/06ad468496.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="imagens/yellow_dumbbell_no_bg.jpg" type="image/png">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1 class="logo">
+        <span class="logo-icon">💪</span>
+        <span class="logo-text">Plano<span>Fit</span></span>
+      </h1>
+      <p class="tagline">Seu corpo, sua meta, nosso plano!</p>
+    </div>
+    <nav>
+      <a href="index.html"><button>Início</button></a>
+      <a href="exercicios.html"><button>Montar Treino</button></a>
+      <a href="dieta.html"><button>Montar Dieta</button></a>
+      <a href="ajuda.html"><button>Ajuda</button></a>
+    </nav>
+  </header>
+
+  <div class="banner-dieta">
+    <h2>MONTE SUA PRÓPRIA DIETA PERSONALIZADA!</h2>
+    <p>Veja aqui como montar uma dieta adequada para seu corpo</p>
+    <ul>
+        <li><i class="fa-solid fa-carrot"></i><h4>Quais os melhores alimentos para sua dieta</h4></li>
+        <li><i class="fa-solid fa-bullseye"></i><h4>Como montar uma dieta com base nos seus objetivos</h4></li>
+        <li><i class="fa-solid fa-check"></i><h4>Aprenda a contar suas calorias diárias</h4></li>
+    </ul>
+    <h3>COM A PLANOFIT O BUCHO SAI!!!</h3>
+  </div>
+    
+  <div class="dieta_forms">
+    <div class="digite-forms">
+        <div class="dieta_forms_input">
+           
+            <label for="idade">Digite sua Idade</label>
+            <input type="number" id="idade" placeholder="anos">
+        </div>
+        <div class="dieta_forms_input">
+            
+            <label for="altura">Digite sua Altura</label>
+            <input type="number" id="altura" placeholder="cm">
+        </div>
+        <div class="dieta_forms_input">
+           
+            <label for="peso">Digite seu Peso</label>
+            <input type="number" id="peso" placeholder="kg">
+        </div>
+    </div>
+    <div class="selecione_forms">
+        <div class="dieta_forms_input">
+            <label for="sexo">Selecione seu gênero</label>
+            <select id="sexo">
+                <option value="selecione">Selecione</option>
+                <option value="Homem">Masculino</option>
+                <option value="Mulher">Feminino</option>
+                <option value="Outro">Outro</option>
+            </select>
+        </div>
+        <div class="dieta_forms_input">
+            <label for="objetivo">Qual seu objetivo</label>
+            <select id="objetivo">
+                <option value="selecione">Selecione</option>
+                <option value="perder-peso">Perder Peso</option>
+                <option value="melhorar-saude">Melhorar Saúde</option>
+                <option value="definir">Definição</option>
+            </select>
+        </div>
+        <div class="dieta_forms_input">
+            <label for="atividade">Atividade Física</label>
+            <select id="atividade">
+                <option value="selecione">Selecione</option>
+                <option value="sedentario">Sedentário</option>
+                <option value="moderado">Moderado</option>
+                <option value="ativo">Muito Ativo</option>
+            </select>
+        </div>
+    </div>
+    <div class="botao_continua">
+        <a href="#" onclick="gerarDieta()">Continuar</a>
+    </div>
+  </div> 
+  
+  <div class="imc-calculator">
+    <h2>Calculadora de IMC</h2>
+    <p>Digite seu peso e altura para calcular o Índice de Massa Corporal.</p>
+    <div class="imc-inputs">
+      <label for="imc-peso">Peso (kg):</label>
+      <input type="number" id="imc-peso" placeholder="Ex: 70">
+      <label for="imc-altura">Altura (cm):</label>
+      <input type="number" id="imc-altura" placeholder="Ex: 170">
+    </div>
+    <button id="calcular-imc" onclick="calcularIMC()">Calcular IMC</button>
+    <div id="imc-resultado" class="imc-resultado"></div>
+  </div>
+  
+
+  <!-- Seção para exibir a lista gerada -->
+  <div id="dieta-gerada" class="dieta-gerada">
+    <h2>Sua Dieta</h2>
+    <ul id="dieta-lista"></ul>
+  </div>
+
+  <footer class="credits-footer">
+    <p>© 2024 PlanoFit - Todos os direitos reservados</p>
+    <p>Desenvolvido por [Equipe do Lucão]</p>
+    <p>Contate-nos em: contato@planofit.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

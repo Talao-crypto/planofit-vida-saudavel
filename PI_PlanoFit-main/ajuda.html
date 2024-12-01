@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlanoFit</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="imagens/yellow_dumbbell_no_bg.jpg" type="image/png">
+</head>
+<body>
+  <!-- Cabeçalho do site -->
+  <header>
+    <div class="header-content">
+      <h1><span>Plano</span>Fit</h1>
+      <p>Seu corpo, sua meta, nosso plano!</p>
+    </div>
+    <!-- Navegação principal -->
+    <nav>
+      <a href="index.html"><button>Início</button></a>
+      <a href="exercicios.html"><button>Montar Treino</button></a>
+      <a href="dieta.html"><button>Montar Dieta</button></a>
+      <a href="ajuda.html"><button>Ajuda</button></a>
+    </nav>
+  </header>
+  
+  <!-- Contêiner Principal para o Conteúdo da Página de Ajuda -->
+  <main class="help-container">
+    <!-- Seção de Informações de Contato -->
+    <section class="contact-info">
+      <h2>Informações de Contato</h2>
+      <p>Email: suporte@planofit.com</p>
+      <p>Telefone: (11) 1234-5678</p>
+      <p>Horário de atendimento: Segunda a Sexta, das 9h às 18h</p>
+    </section>
+
+    <!-- Seção de Formulário de Contato -->
+    <section>
+      <h2>Contato</h2>
+      <form id="contactForm">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Nome" autocomplete="off" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
+        
+        <button type="submit">Enviar</button>
+        
+        <!-- Chave de acesso oculta -->
+        <input type="hidden" name="accessKey" value="24a551e9-69ef-4674-991e-5e6cfae65217">
+      </form>
+      <!-- Div para exibir mensagens de sucesso ou erro -->
+      <div id="formMessage" style="display: none; margin-top: 10px;"></div>
+    </section>
+  </main>
+</body>
+</html>
